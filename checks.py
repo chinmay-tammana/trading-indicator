@@ -15,4 +15,11 @@ def truncation_check(samples=50):
  return len(points)
 def main():
  n=truncation_check(); print(f'truncation check passed for {n} random bars')
+ dataset=pd.read_parquet(CONFIG['paths']['dataset']); x=dataset[FEATURES]
+ assert not np.isinf(x.to_numpy()).any(), 'Infinite feature value found'
+ constants=[c for c in FEATURES if x[c].nunique(dropna=True)<=1]
+ assert not constants, f'Constant features: {constants}'
+ timestamps=dataset.index; last_of_day=pd.Series(timestamps.date,index=timestamps).ne(pd.Series(timestamps.date,index=timestamps).shift(-1))
+ assert dataset.loc[last_of_day,'fwd'].isna().all(), 'A session-final bar has a forward label'
+ print('dataset integrity passed: no infinities, no constant features, no labels on session-final bars')
 if __name__=='__main__':main()

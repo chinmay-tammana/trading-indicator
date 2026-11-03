@@ -2,7 +2,7 @@
 
 - [x] Phase 0: setup and clean Git history
 - [x] Phase 1: fresh data collection and validation
-- [ ] Phase 2: features and labels — pending Phase 2 commit
+- [x] Phase 2: features and labels
 - [ ] Phase 3: split and validation baselines — pending Phase 3 commit
 - [ ] Phase 4: base training — not started; user requested stop before Phase 4
 - [ ] Phase 5: fine-tuning — out of scope

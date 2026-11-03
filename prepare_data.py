@@ -14,6 +14,10 @@ def main():
  frames={s:source[s].loc[aligned_idx] for s in source}
  gs,spy,xlf=frames['GS'],frames['SPY'],frames['XLF']
  feat=make_features(gs,spy,xlf); labels=make_labels(gs.loc[feat.index,'close'],CONFIG['label_threshold']); all_df=feat.join(labels)
+ # Yahoo may return more than the requested 729d interval. Preserve the raw
+ # files, but restrict modeling rows to the two most recent 365-day eras.
+ modeling_start=gs.index.max()-pd.Timedelta(days=2*CONFIG['year_length_days'])
+ all_df=all_df.loc[all_df.index>=modeling_start].copy()
  all_df['era']=np.where(all_df.index>=gs.index.max()-pd.Timedelta(days=CONFIG['year_length_days']),'year2','year1')
  # Define eras and blocks on the warm-up-trimmed bar timeline, retaining unlabelled rows for gap math.
  bars=all_df.copy(); blocks,split=chronological_split(bars)
@@ -30,6 +34,8 @@ def main():
  ordered=[split['blocks'][k] for k in ['year1','ft','validation','test']]; assert all(pd.Timestamp(a['end'])<pd.Timestamp(b['start']) for a,b in zip(ordered,ordered[1:]))
  save_split(split,Path(CONFIG['paths']['split']))
  counts={}
+ for era,d in all_df.groupby('era',sort=True):
+  lab=d[d.y.notna()]; counts[f'era_{era}']={'rows':len(d),'labelled':len(lab),'up_share':float(lab.y.mean()) if len(lab) else None,'down_share':float(1-lab.y.mean()) if len(lab) else None,'decisive_share':float(lab.decisive.mean()) if len(lab) else None,'zero_fwd':int((lab.fwd==0).sum())}
  for name,(a,b) in spans.items():
   d=all_df.iloc[a:b]; lab=d[d.y.notna()]; counts[name]={'rows':len(d),'labelled':len(lab),'up_share':float(lab.y.mean()) if len(lab) else None,'down_share':float(1-lab.y.mean()) if len(lab) else None,'decisive_share':float(lab.decisive.mean()) if len(lab) else None,'zero_fwd':int((lab.fwd==0).sum())}
  path=Path(CONFIG['paths']['dataset']); all_df.to_parquet(path)

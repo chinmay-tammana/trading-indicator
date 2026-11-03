@@ -1,0 +1,1 @@
+pytest suite not executed: pytest is unavailable in the available Python 3.11 environments, and package-index DNS/network access prevented installation. All test functions in tests/test_pipeline.py were invoked directly; see manual_tests.txt.

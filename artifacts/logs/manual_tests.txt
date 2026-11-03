@@ -1,0 +1,6 @@
+test_labels_drop_session_end_and_zero_is_down: PASS
+test_wilson_bounds: PASS
+test_split_keeps_chronological_gaps: PASS
+NaN counts before warmup: {'ret_1': 1, 'ret_2': 2, 'ret_3': 3, 'ret_6': 6, 'ret_14': 14, 'gap': 1, 'rsi': 80, 'macd_n': 25, 'macd_hist_n': 25, 'bb_pos': 19, 'bb_width': 19, 'atr_n': 13, 'vol_20': 20, 'rvol': 19, 'hour': 0, 'dow': 0, 'is_first_bar': 0, 'spy_ret_1': 1, 'spy_ret_3': 3, 'xlf_ret_1': 1, 'xlf_ret_3': 3, 'rel_ret_1': 1}
+NaN counts before warmup: {'ret_1': 1, 'ret_2': 2, 'ret_3': 3, 'ret_6': 6, 'ret_14': 14, 'gap': 1, 'rsi': 65, 'macd_n': 25, 'macd_hist_n': 25, 'bb_pos': 19, 'bb_width': 19, 'atr_n': 13, 'vol_20': 20, 'rvol': 19, 'hour': 0, 'dow': 0, 'is_first_bar': 0, 'spy_ret_1': 1, 'spy_ret_3': 3, 'xlf_ret_1': 1, 'xlf_ret_3': 3, 'rel_ret_1': 1}
+test_features_causal_and_expected_columns: PASS

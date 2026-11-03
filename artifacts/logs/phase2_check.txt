@@ -1,0 +1,2 @@
+truncation check passed for 50 random bars
+dataset integrity passed: no infinities, no constant features, no labels on session-final bars

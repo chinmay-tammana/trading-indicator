@@ -1,0 +1,114 @@
+{
+  "counts": {
+    "era_year1": {
+      "rows": 1731,
+      "labelled": 1482,
+      "up_share": 0.5310391363022942,
+      "down_share": 0.46896086369770584,
+      "decisive_share": 0.7624831309041835,
+      "zero_fwd": 1
+    },
+    "era_year2": {
+      "rows": 1739,
+      "labelled": 1488,
+      "up_share": 0.5067204301075269,
+      "down_share": 0.4932795698924731,
+      "decisive_share": 0.7674731182795699,
+      "zero_fwd": 0
+    },
+    "year1": {
+      "rows": 1723,
+      "labelled": 1476,
+      "up_share": 0.5311653116531165,
+      "down_share": 0.46883468834688347,
+      "decisive_share": 0.7621951219512195,
+      "zero_fwd": 1
+    },
+    "ft": {
+      "rows": 869,
+      "labelled": 743,
+      "up_share": 0.5168236877523553,
+      "down_share": 0.4831763122476447,
+      "decisive_share": 0.7590847913862718,
+      "zero_fwd": 0
+    },
+    "validation": {
+      "rows": 347,
+      "labelled": 297,
+      "up_share": 0.4983164983164983,
+      "down_share": 0.5016835016835017,
+      "decisive_share": 0.8080808080808081,
+      "zero_fwd": 0
+    },
+    "test": {
+      "rows": 507,
+      "labelled": 434,
+      "up_share": 0.4976958525345622,
+      "down_share": 0.5023041474654377,
+      "decisive_share": 0.7511520737327189,
+      "zero_fwd": 0
+    }
+  },
+  "feature_nan_after_warmup": {
+    "ret_1": 0,
+    "ret_2": 0,
+    "ret_3": 0,
+    "ret_6": 0,
+    "ret_14": 0,
+    "gap": 0,
+    "rsi": 0,
+    "macd_n": 0,
+    "macd_hist_n": 0,
+    "bb_pos": 0,
+    "bb_width": 0,
+    "atr_n": 0,
+    "vol_20": 0,
+    "rvol": 0,
+    "hour": 0,
+    "dow": 0,
+    "is_first_bar": 0,
+    "spy_ret_1": 0,
+    "spy_ret_3": 0,
+    "xlf_ret_1": 0,
+    "xlf_ret_3": 0,
+    "rel_ret_1": 0
+  },
+  "infinite_values": 0,
+  "joined_rows": 5069,
+  "rows_lost": 0,
+  "range": [
+    "2023-12-06 09:30:00-05:00",
+    "2026-11-02 15:30:00-05:00"
+  ],
+  "split": {
+    "year2_start": "2025-11-02 15:30:00-05:00",
+    "gap_bars": 8,
+    "blocks": {
+      "year1": {
+        "start": "2024-11-04 09:30:00-05:00",
+        "end": "2025-10-30 14:30:00-04:00",
+        "bar_rows": 1723,
+        "labelled_rows": 1476
+      },
+      "ft": {
+        "start": "2025-11-03 09:30:00-05:00",
+        "end": "2026-05-06 13:30:00-04:00",
+        "bar_rows": 869,
+        "labelled_rows": 743
+      },
+      "validation": {
+        "start": "2026-05-07 15:30:00-04:00",
+        "end": "2026-07-21 11:30:00-04:00",
+        "bar_rows": 347,
+        "labelled_rows": 297
+      },
+      "test": {
+        "start": "2026-07-22 13:30:00-04:00",
+        "end": "2026-11-02 15:30:00-05:00",
+        "bar_rows": 507,
+        "labelled_rows": 434
+      }
+    }
+  },
+  "dividend_treatment": "Unadjusted prices; ex-dividend dates can show as small drops in the overnight gap."
+}
