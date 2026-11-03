@@ -4,7 +4,7 @@
 - [x] Phase 1: fresh data collection and validation
 - [x] Phase 2: features and labels
 - [x] Phase 3: split and validation baselines
-- [ ] Phase 4: base training — not started; user requested stop before Phase 4
+- [x] Phase 4: base training — complete; stopped before Phase 5 per user request
 - [ ] Phase 5: fine-tuning — out of scope
 - [ ] Phase 6: calibration — out of scope
 - [ ] Phase 7: evaluation — out of scope
@@ -41,6 +41,10 @@ Complete. The dataset, Year 1 clipping bounds, era/block label counts, and trunc
 
 Complete. The split and validation-only baseline table are saved under `artifacts/`. The best validation baseline is previous-bar momentum: 57.24% signal accuracy (Wilson 95% CI 51.56%–62.74%), 100% coverage, and +0.0107% net return per signal after 5 bps.
 
-### Phase 4 and later
+### Phase 4 — base training
 
-Not started per user request.
+Complete. Trained the specified XGBoost classifier on 1,125 decisive Year 1 rows. The 5-fold, 8-row-gap time-series CV mean log-loss is 0.7653 and mean accuracy is 51.34%; mean in-fold training log-loss is 0.3544 (CV minus train gap 0.4109). S0 validation log-loss on all 297 labelled rows is 0.7407, Brier 0.2711, accuracy 49.49%. The model is saved to `artifacts/base_model.json`; all six fits are recorded in `artifacts/fit_ledger.json` and the ledger audit passed. Test rows were excluded from the data query and never scored.
+
+### Phase 5 and later
+
+Not started per user request to stop after Phase 4.

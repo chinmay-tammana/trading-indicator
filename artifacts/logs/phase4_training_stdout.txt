@@ -1,0 +1,104 @@
+{
+  "phase": 4,
+  "model_parameters": {
+    "max_depth": 3,
+    "learning_rate": 0.05,
+    "n_estimators": 200,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "eval_metric": "logloss",
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "training_block": "year1 decisive rows only",
+  "training_rows": 1125,
+  "training_first_timestamp": "2024-11-04T10:30:00-05:00",
+  "training_last_timestamp": "2025-10-30T14:30:00-04:00",
+  "cv": {
+    "method": "TimeSeriesSplit",
+    "n_splits": 5,
+    "gap": 8,
+    "folds": [
+      {
+        "fold": 1,
+        "train_start": "2024-11-04T10:30:00-05:00",
+        "train_end": "2025-01-03T10:30:00-05:00",
+        "cv_start": "2025-01-07T09:30:00-05:00",
+        "cv_end": "2025-03-07T09:30:00-05:00",
+        "train_rows": 182,
+        "cv_rows": 187,
+        "train_log_loss": 0.18551547715041633,
+        "cv_log_loss": 0.819701345918967,
+        "cv_accuracy": 0.5187165775401069
+      },
+      {
+        "fold": 2,
+        "train_start": "2024-11-04T10:30:00-05:00",
+        "train_end": "2025-03-05T10:30:00-05:00",
+        "cv_start": "2025-03-07T10:30:00-05:00",
+        "cv_end": "2025-04-29T12:30:00-04:00",
+        "train_rows": 369,
+        "cv_rows": 187,
+        "train_log_loss": 0.3192716331558678,
+        "cv_log_loss": 0.8099512377600583,
+        "cv_accuracy": 0.5347593582887701
+      },
+      {
+        "fold": 3,
+        "train_start": "2024-11-04T10:30:00-05:00",
+        "train_end": "2025-04-25T14:30:00-04:00",
+        "cv_start": "2025-04-29T14:30:00-04:00",
+        "cv_end": "2025-07-02T09:30:00-04:00",
+        "train_rows": 556,
+        "cv_rows": 187,
+        "train_log_loss": 0.38444300740194753,
+        "cv_log_loss": 0.7549403874423933,
+        "cv_accuracy": 0.47058823529411764
+      },
+      {
+        "fold": 4,
+        "train_start": "2024-11-04T10:30:00-05:00",
+        "train_end": "2025-06-27T14:30:00-04:00",
+        "cv_start": "2025-07-02T10:30:00-04:00",
+        "cv_end": "2025-09-08T11:30:00-04:00",
+        "train_rows": 743,
+        "cv_rows": 187,
+        "train_log_loss": 0.4230831912685534,
+        "cv_log_loss": 0.7047056173143884,
+        "cv_accuracy": 0.5401069518716578
+      },
+      {
+        "fold": 5,
+        "train_start": "2024-11-04T10:30:00-05:00",
+        "train_end": "2025-09-04T11:30:00-04:00",
+        "cv_start": "2025-09-08T12:30:00-04:00",
+        "cv_end": "2025-10-30T14:30:00-04:00",
+        "train_rows": 930,
+        "cv_rows": 187,
+        "train_log_loss": 0.45954230017351694,
+        "cv_log_loss": 0.7371683510426552,
+        "cv_accuracy": 0.5026737967914439
+      }
+    ],
+    "mean_validation_log_loss": 0.7652933878956925,
+    "mean_training_log_loss": 0.3543711218300604,
+    "mean_cv_accuracy": 0.5133689839572192,
+    "mean_cv_minus_train_gap": 0.41092226606563204
+  },
+  "final_model_train_metrics": {
+    "log_loss": 0.4827556016483677,
+    "brier_score": 0.15035329415537263,
+    "accuracy": 0.8853333333333333,
+    "rows": 1125
+  },
+  "s0_validation_metrics_all_labelled_rows": {
+    "log_loss": 0.7407257647849733,
+    "brier_score": 0.2711373537874071,
+    "accuracy": 0.494949494949495,
+    "rows": 297
+  },
+  "validation_first_timestamp": "2026-05-08T09:30:00-04:00",
+  "validation_last_timestamp": "2026-07-21T11:30:00-04:00",
+  "model_path": "/Users/chinmay/Desktop/trading project 2/artifacts/base_model.json",
+  "test_block_read_for_scoring": false
+}

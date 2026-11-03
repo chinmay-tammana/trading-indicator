@@ -1,0 +1,38 @@
+[
+  {
+    "purpose": "phase4_year1_timeseries_cv_fold_1",
+    "first_timestamp": "2024-11-04T10:30:00-05:00",
+    "last_timestamp": "2025-01-03T10:30:00-05:00",
+    "row_count": 182
+  },
+  {
+    "purpose": "phase4_year1_timeseries_cv_fold_2",
+    "first_timestamp": "2024-11-04T10:30:00-05:00",
+    "last_timestamp": "2025-03-05T10:30:00-05:00",
+    "row_count": 369
+  },
+  {
+    "purpose": "phase4_year1_timeseries_cv_fold_3",
+    "first_timestamp": "2024-11-04T10:30:00-05:00",
+    "last_timestamp": "2025-04-25T14:30:00-04:00",
+    "row_count": 556
+  },
+  {
+    "purpose": "phase4_year1_timeseries_cv_fold_4",
+    "first_timestamp": "2024-11-04T10:30:00-05:00",
+    "last_timestamp": "2025-06-27T14:30:00-04:00",
+    "row_count": 743
+  },
+  {
+    "purpose": "phase4_year1_timeseries_cv_fold_5",
+    "first_timestamp": "2024-11-04T10:30:00-05:00",
+    "last_timestamp": "2025-09-04T11:30:00-04:00",
+    "row_count": 930
+  },
+  {
+    "purpose": "phase4_final_base_model_year1_decisive_only",
+    "first_timestamp": "2024-11-04T10:30:00-05:00",
+    "last_timestamp": "2025-10-30T14:30:00-04:00",
+    "row_count": 1125
+  }
+]

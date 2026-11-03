@@ -1,0 +1,9 @@
+Phase 4 CHECK: PASS
+Base model saved: artifacts/base_model.json (244063 bytes)
+Year 1 decisive fit rows: 1125
+CV mean train log-loss: 0.354371
+CV mean validation log-loss: 0.765293
+CV minus train gap: 0.410922
+S0 validation log-loss: 0.740726
+Fit ledger audit: PASS; all fit rows end before validation start.
+Test block scoring: not performed.

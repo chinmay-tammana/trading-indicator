@@ -16,3 +16,11 @@ pytest
 ```
 
 `data_fetch.py` downloads fresh data when raw files are absent and then preserves them. Use `--refresh` only when you intentionally want a new raw download. Yahoo may return more than the requested range; downstream training uses only the two latest 365-day eras. Phase 2 creates labels and descriptive block counts for the full split as required by the project specification. Baselines evaluate validation only; test performance is not evaluated before Phase 8.
+
+Phase 4 base training (after fresh data preparation):
+
+```sh
+python3 train_base.py
+```
+
+This trains only on Year 1 decisive rows, runs 5-fold chronological cross-validation, scores S0 on validation, and writes the base model plus fit ledger and logs. It does not evaluate test performance.
