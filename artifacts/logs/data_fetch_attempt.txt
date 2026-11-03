@@ -1,0 +1,1 @@
+Fresh Yahoo Finance downloads were attempted for GS, SPY, and XLF with period=729d and interval=1h. All failed because this environment could not resolve query2.finance.yahoo.com (DNS/network unavailable). No downloaded rows are being retained. data_fetch.py now errors on an empty download and does not write an empty raw file.
