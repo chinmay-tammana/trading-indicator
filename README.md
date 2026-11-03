@@ -1,8 +1,21 @@
-# GS hourly AI trading indicator: data and baseline stages
+# GS Hourly Trading Indicator
 
-This workspace contains Phases 0–3 of the supplied project specification. Model training starts in Phase 4 and has not been run.
+This project explores whether hourly market data can help predict the direction of Goldman Sachs (GS) stock over the next same-day hourly bar. It uses fresh GS, SPY, and XLF data downloaded from Yahoo Finance.
 
-Use Python 3.10–3.12 in a clean virtual environment:
+## Work completed
+
+- **Phases 0–1:** Set up the project and downloaded and checked the market data.
+- **Phase 2:** Created technical and market-context features and next-bar direction labels.
+- **Phase 3:** Split the data chronologically and compared simple baselines on validation data. Previous-bar momentum reached 57.24% accuracy.
+- **Phase 4:** Trained the initial XGBoost model on decisive Year 1 rows and checked it with time-series cross-validation. On validation, it reached 49.49% accuracy and 0.7407 log-loss. The training-to-CV loss gap suggests overfitting.
+
+The main dataset is available as [CSV](data/dataset.csv) for spreadsheet apps and as [Parquet](data/dataset.parquet) for Python workflows. The Phase 4 model, fit ledger, reports, and progress checklist are also saved in this repository.
+
+**Status:** Work stopped after Phase 4. Fine-tuning and calibration have not been done, and the test block has not been evaluated.
+
+## Run the pipeline
+
+Use Python 3.10–3.12:
 
 ```sh
 python3 -m venv .venv
@@ -12,15 +25,7 @@ python3 data_fetch.py
 python3 prepare_data.py
 python3 checks.py
 python3 baselines.py
-pytest
-```
-
-`data_fetch.py` downloads fresh data when raw files are absent and then preserves them. Use `--refresh` only when you intentionally want a new raw download. Yahoo may return more than the requested range; downstream training uses only the two latest 365-day eras. Phase 2 creates labels and descriptive block counts for the full split as required by the project specification. Baselines evaluate validation only; test performance is not evaluated before Phase 8.
-
-Phase 4 base training (after fresh data preparation):
-
-```sh
 python3 train_base.py
 ```
 
-This trains only on Year 1 decisive rows, runs 5-fold chronological cross-validation, scores S0 on validation, and writes the base model plus fit ledger and logs. It does not evaluate test performance.
+`data_fetch.py` keeps existing raw downloads unchanged; pass `--refresh` to intentionally download them again. See [instructions/progress.md](instructions/progress.md) for the phase checklist and decisions.
