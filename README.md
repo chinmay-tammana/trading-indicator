@@ -15,4 +15,4 @@ python3 baselines.py
 pytest
 ```
 
-`data_fetch.py` reuses immutable `data/raw/{GS,SPY,XLF}_1h.parquet`; use `--refresh` only when you intentionally want a new raw download. The baseline stage evaluates validation only; the test block is untouched.
+`data_fetch.py` downloads fresh data when raw files are absent and then preserves them. Use `--refresh` only when you intentionally want a new raw download. Yahoo may return more than the requested range; downstream training uses only the two latest 365-day eras. Phase 2 creates labels and descriptive block counts for the full split as required by the project specification. Baselines evaluate validation only; test performance is not evaluated before Phase 8.

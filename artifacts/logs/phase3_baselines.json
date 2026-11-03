@@ -1,0 +1,117 @@
+{
+  "always_up": {
+    "accuracy": 0.4983164983164983,
+    "coverage": 1.0,
+    "signals": 297,
+    "wilson_95": [
+      0.44183820653373623,
+      0.5548377835245488
+    ],
+    "costs": {
+      "2": {
+        "net_return_per_signal": -0.00034731805290764744,
+        "signals": 297
+      },
+      "5": {
+        "net_return_per_signal": -0.0006473180529076479,
+        "signals": 297
+      },
+      "10": {
+        "net_return_per_signal": -0.0011473180529076477,
+        "signals": 297
+      }
+    }
+  },
+  "year1_majority": {
+    "accuracy": 0.4983164983164983,
+    "coverage": 1.0,
+    "signals": 297,
+    "wilson_95": [
+      0.44183820653373623,
+      0.5548377835245488
+    ],
+    "costs": {
+      "2": {
+        "net_return_per_signal": -0.00034731805290764744,
+        "signals": 297
+      },
+      "5": {
+        "net_return_per_signal": -0.0006473180529076479,
+        "signals": 297
+      },
+      "10": {
+        "net_return_per_signal": -0.0011473180529076477,
+        "signals": 297
+      }
+    }
+  },
+  "rsi_rule": {
+    "accuracy": 0.43373493975903615,
+    "coverage": 0.5589225589225589,
+    "signals": 166,
+    "wilson_95": [
+      0.36068569709567305,
+      0.5097817367525844
+    ],
+    "costs": {
+      "2": {
+        "net_return_per_signal": -0.0005973116176555483,
+        "signals": 166
+      },
+      "5": {
+        "net_return_per_signal": -0.0008973116176555489,
+        "signals": 166
+      },
+      "10": {
+        "net_return_per_signal": -0.001397311617655549,
+        "signals": 166
+      }
+    }
+  },
+  "previous_bar_momentum": {
+    "accuracy": 0.5723905723905723,
+    "coverage": 1.0,
+    "signals": 297,
+    "wilson_95": [
+      0.5155537695572328,
+      0.6273786579365077
+    ],
+    "costs": {
+      "2": {
+        "net_return_per_signal": 0.00040711900510903874,
+        "signals": 297
+      },
+      "5": {
+        "net_return_per_signal": 0.00010711900510903826,
+        "signals": 297
+      },
+      "10": {
+        "net_return_per_signal": -0.0003928809948909617,
+        "signals": 297
+      }
+    }
+  },
+  "logistic_regression": {
+    "accuracy": 0.48484848484848486,
+    "coverage": 1.0,
+    "signals": 297,
+    "wilson_95": [
+      0.42856746643268934,
+      0.5415164440918766
+    ],
+    "costs": {
+      "2": {
+        "net_return_per_signal": -0.0004042029117389514,
+        "signals": 297
+      },
+      "5": {
+        "net_return_per_signal": -0.0007042029117389517,
+        "signals": 297
+      },
+      "10": {
+        "net_return_per_signal": -0.0012042029117389516,
+        "signals": 297
+      }
+    }
+  }
+}

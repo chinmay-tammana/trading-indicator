@@ -1,0 +1,6 @@
+             baseline  accuracy  coverage  signals  wilson_low  wilson_high  net_return_per_signal_2bps  net_return_per_signal_5bps  net_return_per_signal_10bps
+            always_up  0.498316  1.000000      297    0.441838     0.554838                   -0.000347                   -0.000647                    -0.001147
+       year1_majority  0.498316  1.000000      297    0.441838     0.554838                   -0.000347                   -0.000647                    -0.001147
+             rsi_rule  0.433735  0.558923      166    0.360686     0.509782                   -0.000597                   -0.000897                    -0.001397
+previous_bar_momentum  0.572391  1.000000      297    0.515554     0.627379                    0.000407                    0.000107                    -0.000393
+  logistic_regression  0.484848  1.000000      297    0.428567     0.541516                   -0.000404                   -0.000704                    -0.001204
